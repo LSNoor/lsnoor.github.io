@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Lucas Noormamode</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="../index.html" class="logo">Lucas Noormamode</a>
+    <div class="nav-links">
+      <a href="https://github.com/LSNoor/lsnoor.github.io" target="_blank">GitHub</a>
+      <a href="mailto:lucnoor@gmail.com">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="padding: 3rem 0 5rem;">
+  <a class="back" href="../index.html">← back</a>
+  <div class="article-header">
+    <h1>Plasma Control Project</h1>
+    <div class="meta">2022-2023</div>
+  </div>
+  <div class="prose">
+
+       <!-- Your content goes here -->
+    <h2>Overview</h2>
+    <p>During my work at Dragonfly/Comet, I was part of a team aiming to tackle challenges related to the
+        control of a plasma etching machine. The team included plasma scientists and ML research engineers
+        and the work was conducted in San Jose, CA and Montréal, QC.</p>
+
+      <p>We optimized the experimental control of constrained plasmas by combining reinforcement
+          learning with uncertainty-driven active learning using committee and ensemble surrogate
+          disagreement as the acquisition signal alongside Bayesian optimization.</p>
+
+      <p>We also developed a physics-informed digital twin simulator to train and validate selections strategies.</p>
+
+      <p>While details on this project are under NDA, feel free to contact me for details, I will do my
+          best to answer your question.</p>
+
+
+    <h2>Internship report</h2>
+    <p>You can download below my Internship report (In French). It corresponds to the preliminary work on the project that
+    I conducted during my Master's internship at Dragonfly/Comet</p>
+
+    <p><a href="/static/Rapport_de_Stage___Ete_2022_Lucas_NOORMAMODE.pdf">Download Internship Report (PDF) →</a></p>
+
+
+    <details>
+      <summary style="cursor: pointer; font-weight: bold; margin-bottom: 1rem;">Translated abstract</summary>
+      
+      <p><strong>Surrogate Modeling & Active Learning for Industrial Machine Control</strong></p>
+
+
+      <p>
+        Controlling and optimizing production processes is a fundamental challenge in modern industry,
+        particularly in capital-intensive sectors such as microelectronics. This work addresses the development
+        of a surrogate model—a neural network trained via supervised learning—to faithfully reproduce the behavior
+        of a complex industrial machine ("Machine X") treated as a black box. Since operating the machine is costly
+        and constrained, building a reliable simulator enables faster, parallelizable experimentation without physical
+        access to the system.
+      </p>
+
+      <p>
+        A key challenge lies in the scarcity of labeled data: Due to the extent of the input space, exhaustive
+        grid-based exploration of the input space is infeasible, and random sampling fails to prioritize the most
+        informative regions. To address this, we employ active learning through Query by Committee (QBC),
+        a model-agnostic method that identifies high-uncertainty regions by measuring prediction disagreement
+        among an ensemble of bootstrap-trained models. We propose and compare three QBC variants: (1) a standard
+        pool-based approach, (2) a query synthesis approach using optimization to converge toward high-variance points,
+        and (3) a Neural Adjoint QBC (NA-QBC) variant that introduces a learned variance estimator
+        prior to optimization.
+      </p>
+
+      <p>
+        Experiments conducted on benchmark functions in one and two dimensions show that all three variants
+        yield performance equivalent to or slightly better than random sampling, with a notable ability
+        to detect discontinuities and critical regions of the input space. The methods show particular promise
+        during early iterations, and this theoretical advantage is expected to increase in higher-dimensional
+        settings (>2), which remains to be validated. Additionally, the proposed solution supports automated input
+        transmission to the real machine, eliminating manual adjustments and significantly accelerating the overall
+        data acquisition process.
+      </p>
+      
+      </details>
+
+  </div>
+</div>
+
+<footer>© 2026 Lucas Noormamode</footer>
+
+</body>
+</html>
